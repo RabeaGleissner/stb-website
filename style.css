@@ -1,0 +1,73 @@
+* {
+  box-sizing:border-box;
+}
+
+html {
+  height: 100%;
+  background-color: white;
+}
+
+body {
+  font-family: Helvetica;
+  color: black;
+  background-color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 1.25em;
+  font-weight: 100;
+  line-height: 1;
+}
+
+p {
+  margin: 0 0 1.25em;
+}
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.4em; }
+
+.container {
+  margin: 60px auto 0;
+  display: flex;
+  width: 900px;
+}
+.visitenkarte {
+  border: 1px solid grey;
+  height: 100%;
+}
+
+.portfolio {
+  width: 500px;
+  padding-left: 40px;
+  height: 1000px;
+}
+
+.zahlen {
+  /*background-image: url("zahlen.png");*/
+  /*background-size: 80%;*/
+  /*opacity: .5;*/
+}
+
+.leer, .zahlen {
+  height: 300px;
+  width: 200px;
+}
+
+.oben, .unten, .leer, .zahlen {
+  border: 1px solid rgba(241, 243, 244, 0.5);
+}
+
+.oben, .unten {
+  display: flex;
+}
+
+.unten {
+  background-color: lightgrey;
+}
+
+.intro-text {
+  margin-top: 30px;
+}
