@@ -12,7 +12,7 @@ body {
   font-family: Arial, sans-serif;
   color: black;
   background-color: #FCFCFC;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   height: 100%;
 }
@@ -46,7 +46,8 @@ p {
 }
 
 .container {
-  width: 70%;
+  width: 60%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -59,10 +60,19 @@ p {
 }
 
 .portfolio {
-  width: 90%;
+  width: 94%;
   margin: 0 auto;
   padding-top: 20px;
   height: 100%;
+  background-image: url("1-1.jpg");
+  background-size: 20em;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 60px;
+}
+
+.dienstleistungen {
+  width: 54%;
 }
 
 header {
@@ -83,18 +93,8 @@ header {
   margin-bottom: 10px;
 }
 
-.kontakt {
-  margin-bottom: 20px;
-}
-
-.kontakt-rechts {
-  text-align: right;
-  flex-grow: 1;
-  padding-right: 20px;
-}
-
-.kontakt-links {
-  flex-grow: 1;
+.name {
+  font-weight: 700;
 }
 
 footer {
@@ -108,9 +108,193 @@ footer {
   margin-bottom: 20px;
 }
 
-.impressum {
-  font-size: .8em;
-  text-align: center;
-  margin-bottom: 10px;
+.kontakt-rechts {
+  text-align: right;
+  flex-grow: 1;
+  padding-right: 20px;
 }
 
+.kontakt-links {
+  flex-grow: 1;
+}
+
+
+.impressum {
+  /*font-size: .8em;*/
+  text-align: right;
+  margin-top: 20px;
+}
+
+.ueber-mich-heading {
+  background-color: #D2E9F1;
+  cursor: pointer;
+  margin-left: -10px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position-x: 9px;
+  background-position-y: 8px;
+}
+
+.ueber-mich {
+  font-weight: 100;
+  font-size: 1.3em;
+  margin-left: 42px;
+  height: 40px;
+  padding-top: 7px;
+  vertical-align: middle;
+  line-height: 28px;
+}
+
+.ueber-mich-heading.zu {
+  background-image: url("plus.png");
+}
+
+.ueber-mich-heading.auf {
+  background-image: url("minus.png");
+}
+
+.werdegang.hide {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.werdegang {
+  -webkit-transition: all .8s linear;
+  -moz-transition: all .8s linear;
+  -ms-transition: all .8s linear;
+  transition: all .8s linear;
+  max-height: 300px;
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .portfolio {
+    background-size: 15em;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  body {
+    font-size: 16px;
+  }
+
+  .image-space {
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .image-space {
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+  .portfolio {
+    width: 97%;
+    background: none;
+  }
+
+  .dienstleistungen-wrapper {
+    background-image: url("querfarbig.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+  }
+
+  .dienstleistungen {
+    width: 94%;
+    margin: 0 auto;
+  }
+
+  .image-space {
+    height: 15em;
+  }
+
+  .ueber-mich-heading {
+    margin-top: 20px;
+    background-position-x: 16px;
+  }
+
+  .ueber-mich {
+    margin-left: 49px;
+  }
+  .werdegang {
+    max-height: 450px;
+    width: 94%;
+    margin: 0 auto 20px auto;
+  }
+
+  .kontakt-wrapper {
+    flex-direction: column;
+  }
+
+  .kontakt-rechts, .kontakt-links, .impressum {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 430px) {
+  .image-space {
+    height: 20em;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .image-space {
+    height: 16em;
+  }
+}
+
+@media only screen and (min-width: 312px) {
+  .image-space {
+    height: 12em;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  .image-space {
+    height: 15em;
+  }
+}
+
+@media only screen and (min-width: 440px) {
+  .image-space {
+    height: 20em;
+  }
+}
+
+@media only screen and (min-width: 560px) {
+  .image-space {
+    height: 24em;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .image-space {
+    height: 27em;
+  }
+}
+
+@media only screen and (min-width: 730px) {
+  .image-space {
+    height: 30em;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .image-space {
+    height: 35em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .image-space {
+    height: 0em;
+  }
+}
