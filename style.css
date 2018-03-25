@@ -1,5 +1,5 @@
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -8,66 +8,109 @@ html {
 }
 
 body {
-  font-family: Helvetica;
+  margin: 0;
+  font-family: Arial, sans-serif;
   color: black;
-  background-color: white;
+  background-color: #FCFCFC;
   font-size: 16px;
   line-height: 1.5;
   height: 100%;
 }
 
-h1, h2, h3, h4 {
-  margin: 0 0 1.25em;
-  font-weight: 100;
-  line-height: 1;
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 0;
+  font-size: 2.4em;
+  font-family: 'Comfortaa', Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.7em;
+  line-height: 1.3em;
+  margin-top: 0;
+}
+
+h3 {
+  font-family: 'Comfortaa', Helvetica, sans-serif;
+  font-size: 1.8em;
+  margin: 0 0 .4em;
 }
 
 p {
-  margin: 0 0 1.25em;
+  margin: 0;
 }
-
-h1 { font-size: 1.8em; }
-h2 { font-size: 1.4em; }
 
 .container {
-  margin: 60px auto 0;
-  display: flex;
-  width: 900px;
+  width: 70%;
+  margin: 0 auto;
 }
-.visitenkarte {
-  border: 1px solid grey;
+
+.portfolio-wrapper {
+  background-color: white;
+  width: 100%;
   height: 100%;
+  border-left: 1px solid #E9E9E9;
+  border-right: 1px solid #E9E9E9;
 }
 
 .portfolio {
-  width: 500px;
-  padding-left: 40px;
-  height: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  height: 100%;
 }
 
-.zahlen {
-  /*background-image: url("zahlen.png");*/
-  /*background-size: 80%;*/
-  /*opacity: .5;*/
+header {
+  background-color: #D2E9F1;
+  text-align: right;
+  padding: 20px 20px 10px 0;
 }
 
-.leer, .zahlen {
-  height: 300px;
-  width: 200px;
+.intro {
+  margin-bottom: 20px;
 }
 
-.oben, .unten, .leer, .zahlen {
-  border: 1px solid rgba(241, 243, 244, 0.5);
+.leistungen {
+  margin-bottom: 40px;
 }
 
-.oben, .unten {
+.name, .adresse {
+  margin-bottom: 10px;
+}
+
+.kontakt {
+  margin-bottom: 20px;
+}
+
+.kontakt-rechts {
+  text-align: right;
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+.kontakt-links {
+  flex-grow: 1;
+}
+
+footer {
+  font-size: .9em;
+  padding: 20px 0 5px 20px;
+  background-color: #D2E9F1;
+}
+
+.kontakt-wrapper {
   display: flex;
+  margin-bottom: 20px;
 }
 
-.unten {
-  background-color: lightgrey;
+.impressum {
+  font-size: .8em;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.intro-text {
-  margin-top: 30px;
-}
