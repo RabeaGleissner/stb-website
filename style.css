@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
 html {
   height: 100%;
   background-color: white;
@@ -46,8 +50,8 @@ p {
 }
 
 .container {
-  width: 60%;
-  max-width: 1000px;
+  width: 65%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -60,19 +64,29 @@ p {
 }
 
 .portfolio {
+  display: grid;
+  grid-column-gap: 15px;
   width: 94%;
   margin: 0 auto;
   padding-top: 20px;
   height: 100%;
-  background-image: url("1-1.jpg");
-  background-size: 20em;
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: 60px;
+  grid-template-areas:
+  "services desktopimage"
+  "uebermich uebermich"
+  "werdegang werdegang"
 }
 
 .dienstleistungen {
-  width: 54%;
+  grid-area: services;
+}
+
+.desktop-image {
+  grid-area: desktopimage;
+}
+
+.mobile-image {
+  grid-area: mobileimage;
+  display: none;
 }
 
 header {
@@ -142,25 +156,25 @@ footer {
   background-size: 25px;
   background-repeat: no-repeat;
   background-position-x: 9px;
-  background-position-y: 8px;
+  background-position-y: 15px;
+  grid-area: uebermich;
 }
 
 .ueber-mich {
   font-weight: 100;
   font-size: 1.3em;
   margin-left: 42px;
-  height: 40px;
-  padding-top: 7px;
-  vertical-align: middle;
-  line-height: 28px;
+  padding-top: 12px;
+  padding-bottom: 20px;
+  height: 30px;
 }
 
 .ueber-mich-heading.zu {
-  background-image: url("plus.png");
+  background-image: url("images/icons/plus.png");
 }
 
 .ueber-mich-heading.auf {
-  background-image: url("minus.png");
+  background-image: url("images/icons/minus.png");
 }
 
 .werdegang.hide {
@@ -177,11 +191,13 @@ footer {
   max-height: 300px;
   opacity: 1;
   margin-bottom: 20px;
+  margin-top: 15px;
+  grid-area: werdegang;
 }
 
 @media only screen and (max-width: 1600px) {
-  .portfolio {
-    background-size: 15em;
+  .container {
+    width: 70%;
   }
 }
 
@@ -193,32 +209,37 @@ footer {
   .container {
     width: 80%;
   }
+
+  .ueber-mich-heading {
+    background-position-y: 13px;
+  }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 700px) {
   .container {
     width: 100%;
-  }
-  .portfolio {
-    width: 97%;
-    background: none;
+    grid-row-gap: 15px;
   }
 
-  .dienstleistungen-wrapper {
-    background-image: url("querfarbig.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
+  .portfolio {
+    grid-template-areas:
+    "services services"
+    "mobileimage mobileimage"
+    "uebermich uebermich"
+    "werdegang werdegang"
+  }
+
+  .mobile-image {
+    display: block;
+  }
+
+  .desktop-image {
+    display: none;
   }
 
   .dienstleistungen {
     width: 94%;
     margin: 0 auto;
-  }
-
-  .image-space {
-    height: 15em;
   }
 
   .ueber-mich-heading {
@@ -229,10 +250,9 @@ footer {
   .ueber-mich {
     margin-left: 49px;
   }
+
   .werdegang {
     max-height: 450px;
-    width: 94%;
-    margin: 0 auto 20px auto;
   }
 
   .kontakt-wrapper {
@@ -242,65 +262,5 @@ footer {
   .kontakt-rechts, .kontakt-links, .impressum-link {
     text-align: center;
     font-size: 16px;
-  }
-}
-
-@media only screen and (min-width: 430px) {
-  .image-space {
-    height: 20em;
-  }
-}
-
-@media only screen and (min-width: 400px) {
-  .image-space {
-    height: 16em;
-  }
-}
-
-@media only screen and (min-width: 312px) {
-  .image-space {
-    height: 12em;
-  }
-}
-
-@media only screen and (min-width: 350px) {
-  .image-space {
-    height: 15em;
-  }
-}
-
-@media only screen and (min-width: 440px) {
-  .image-space {
-    height: 20em;
-  }
-}
-
-@media only screen and (min-width: 560px) {
-  .image-space {
-    height: 24em;
-  }
-}
-
-@media only screen and (min-width: 650px) {
-  .image-space {
-    height: 27em;
-  }
-}
-
-@media only screen and (min-width: 730px) {
-  .image-space {
-    height: 30em;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  .image-space {
-    height: 35em;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  .image-space {
-    height: 0em;
   }
 }
