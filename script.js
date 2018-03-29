@@ -2,7 +2,7 @@ var titel = document.getElementById("ueber-mich");
 var werdegang = document.getElementById("werdegang");
 var ueberMich = document.getElementById("ueber-mich-heading");
 
-titel.addEventListener('click', function() {
+ueberMich.addEventListener('click', function() {
   if (werdegang.classList.contains("hide")) {
     werdegang.classList.remove("hide");
   } else {
