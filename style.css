@@ -65,15 +65,16 @@ p {
 
 .portfolio {
   display: grid;
+  display: -ms-grid;
   grid-column-gap: 15px;
+  grid-template-areas:
+  "services desktopimage"
+  "uebermich uebermich"
+  "werdegang werdegang";
   width: 94%;
   margin: 0 auto;
   padding-top: 20px;
   height: 100%;
-  grid-template-areas:
-  "services desktopimage"
-  "uebermich uebermich"
-  "werdegang werdegang"
 }
 
 .dienstleistungen {
@@ -215,6 +216,12 @@ footer {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .werdegang {
+    max-height: 450px;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .container {
     width: 100%;
@@ -249,10 +256,6 @@ footer {
 
   .ueber-mich {
     margin-left: 49px;
-  }
-
-  .werdegang {
-    max-height: 450px;
   }
 
   .kontakt-wrapper {
