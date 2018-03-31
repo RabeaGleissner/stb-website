@@ -4,6 +4,8 @@
 
 img {
   width: 100%;
+  display: block;
+  height: auto;
 }
 
 html {
@@ -64,29 +66,24 @@ p {
 }
 
 .portfolio {
-  display: grid;
-  display: -ms-grid;
-  grid-column-gap: 15px;
-  grid-template-areas:
-  "services desktopimage"
-  "uebermich uebermich"
-  "werdegang werdegang";
   width: 94%;
   margin: 0 auto;
   padding-top: 20px;
   height: 100%;
 }
 
-.dienstleistungen {
-  grid-area: services;
+.portfolio-top {
+  display: flex;
 }
 
-.desktop-image {
-  grid-area: desktopimage;
+.desktop-image-wrapper {
+  width: 100%;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .mobile-image {
-  grid-area: mobileimage;
   display: none;
 }
 
@@ -157,8 +154,8 @@ footer {
   background-size: 25px;
   background-repeat: no-repeat;
   background-position-x: 9px;
-  background-position-y: 15px;
-  grid-area: uebermich;
+  background-position-y: 14px;
+  height: 50px;
 }
 
 .ueber-mich {
@@ -168,6 +165,7 @@ footer {
   padding-top: 12px;
   padding-bottom: 20px;
   height: 30px;
+  line-height: 30px;
 }
 
 .ueber-mich-heading.zu {
@@ -193,7 +191,6 @@ footer {
   opacity: 1;
   margin-bottom: 20px;
   margin-top: 15px;
-  grid-area: werdegang;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -223,17 +220,17 @@ footer {
 }
 
 @media only screen and (max-width: 700px) {
-  .container {
-    width: 100%;
-    grid-row-gap: 15px;
+  .portfolio-top {
+    flex-direction: column;
   }
 
-  .portfolio {
-    grid-template-areas:
-    "services services"
-    "mobileimage mobileimage"
-    "uebermich uebermich"
-    "werdegang werdegang"
+  .desktop-image-wrapper {
+    padding: 0;
+    height: 0;
+  }
+
+  .container {
+    width: 100%;
   }
 
   .mobile-image {
@@ -247,6 +244,10 @@ footer {
   .dienstleistungen {
     width: 94%;
     margin: 0 auto;
+  }
+
+  .leistungen {
+    margin-bottom: 0;
   }
 
   .ueber-mich-heading {
