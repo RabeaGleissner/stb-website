@@ -18,7 +18,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: black;
-  background-color: #FCFCFC;
+  background-color: #f6f6f6;
   font-size: 20px;
   line-height: 1.5;
   min-height: 100%;
@@ -50,6 +50,7 @@ h3 {
 
 p {
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .container {
